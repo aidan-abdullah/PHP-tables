@@ -14,7 +14,7 @@ Role  TINYINT(1))"
 
 $stmt->execute();
 $stmt->closeCursor();
-echo("tblusers created")
+echo("tblusers created");
 
 $stmt = $conn->prepare("
 CREATE TABLE TblSubjects(SubjectID INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
