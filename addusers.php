@@ -21,8 +21,7 @@
 	$stmt->bindParam(':gender', $_POST["gender"]);
 	$stmt->bindParam(':role', $role);
 	$stmt->execute();
-	}
-catch(PDOException $e)
+
 	{
 		echo "error".$e->getMessage();
 	}
