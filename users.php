@@ -25,13 +25,16 @@
     <input type="submit" value="Add User">
 </form>
 
+<?php
 <h2>Current users</h2>
 include_once("connection.php")
 $stmt = $conn->prepare("SELECT * FROM TblSubjects");
 $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
-        echo($row["forename"]." ".$row)
+        echo($row["forename"]." ".$row["surname"]."<br>");
     }
+?>
+
 </body>
 </html>
