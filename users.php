@@ -12,7 +12,6 @@
     Password:<input type="password" name="passwd"><br>
     House:<input type="text" name="house"><br>
     Year:<input type="text" name="year"><br>
-    <!--Creates a drop down list-->
     Gender:<select name="gender">
             <option value="M">Male</option>
             <option value="F">Female</option>
@@ -28,7 +27,7 @@
 <?php
 <h2>Current users</h2>
 include_once("connection.php")
-$stmt = $conn->prepare("SELECT * FROM TblSubjects");
+$stmt = $conn->prepare("SELECT * FROM TblUsers");
 $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
