@@ -6,7 +6,7 @@
     
 </head>
 <body>
-    <form action="addusers.php">
+    <form action="addusers.php" method="POST">
     First name:<input type="text" name="forename"><br>
     Last name:<input type="text" name="surname"><br>
     Password:<input type="password" name="passwd"><br>
@@ -28,11 +28,11 @@
 
 
 include_once("connection.php");
-$stmt = $conn->prepare("SELECT * FROM TblUsers");
+$stmt = $conn->prepare("SELECT * FROM tblusers");
 $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
-        echo($row["forename"]." ".$row["surname"]."<br>");
+        echo($row["Forename"]." ".$row["Surname"]."<br>");
     }
 ?>
 

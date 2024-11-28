@@ -1,6 +1,7 @@
 <?php
 	include_once('connection.php');
 	array_map("htmlspecialchars", $_POST);
+	print_r($_POST);
 	switch($_POST["role"]){
 		case "Pupil":
 			$role=0;
@@ -22,8 +23,6 @@
 	$stmt->bindParam(':role', $role);
 	$stmt->execute();
 
-	{
-		echo "error".$e->getMessage();
-	}
+	
 $conn=null;
 ?>
