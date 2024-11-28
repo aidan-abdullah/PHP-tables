@@ -16,7 +16,7 @@ $stmt->closeCursor();
 
 $stmt->execute();
 $stmt->closeCursor();
-echo("tblusers created");
+echo("<br>tblUsers created<br>");
 
 $stmt = $conn->prepare("DROP TABLE IF EXISTS TblSubjects;
 CREATE TABLE TblSubjects(SubjectID INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
